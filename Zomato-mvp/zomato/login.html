@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zomato_logo.png/220px-Zomato_logo.png"
+    />
+    <link
+      rel="stylesheet"href="log_in.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Eat and bites </title>
+  </head>
+  <body>
+    <section class="sub-header">
+   
+     
+</section> 
+
+    <div class="wrapper">
+       <div class="title-text">
+          <div class="title login">
+             Login Form
+          </div>
+          <div class="title signup">
+             Signup Form
+          </div>
+       </div>
+       <div class="form-container">
+          <div class="slide-controls">
+             <input type="radio" name="slide" id="login" checked>
+             <input type="radio" name="slide" id="signup">
+             <label for="login" class="slide login">Login</label>
+             <label for="signup" class="slide signup">Signup</label>
+             <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+             <form method="post" name="google-sheets" class="login">
+                <div class="field">
+                   <input type="email" placeholder="Email Address" name="email" required>
+                </div>
+                <div class="field">
+                   <input type="text" placeholder="Password" name="password" required>
+                </div>
+                <div class="pass-link">
+                   <a href="#">Forgot password?</a>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" name="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                   Not a member? <a href="">Signup now</a>
+                </div>
+             </form>
+          
+<form method="post" name="google-sheets" class="signup">
+ <div class="field">
+    <input type="email" placeholder="Email Address" name="email" required>
+ </div>
+ <div class="field">
+    <input type="text" placeholder="Password" name="password" required>
+ </div>
+ <div class="field">
+    <input type="text" placeholder="Confirm password" name="confirm_password" required>
+ </div>
+ <div class="field btn">
+    <div class="btn-layer"></div>
+    <input type="submit" name="submit" value="Signup">
+ </div>
+</form>
+</div>
+</div>
+</div>
+
+    <script>
+       const loginText = document.querySelector(".title-text .login");
+       const loginForm = document.querySelector("form.login");
+       const loginBtn = document.querySelector("label.login");
+       const signupBtn = document.querySelector("label.signup");
+       const signupLink = document.querySelector("form .signup-link a");
+       signupBtn.onclick = (()=>{
+         loginForm.style.marginLeft = "-50%";
+         loginText.style.marginLeft = "-50%";
+       });
+       loginBtn.onclick = (()=>{
+         loginForm.style.marginLeft = "0%";
+         loginText.style.marginLeft = "0%";
+       });
+       signupLink.onclick = (()=>{
+         signupBtn.click();
+         return false;
+       });
+    </script>
+
+
+<script>
+    const scriptURL = 
+          'https://script.google.com/macros/s/AKfycbx9i6O0qnmz6BSiw0J6Q2PuTKcpF3WiQJEvNq3T5wzelkOk0lhWd8HVNqWcCef93HYBtA/exec'
+          const form = document.forms['google-sheets']
+         url:'https://api.apispreadsheets.com/data/MyiAdgDG7vdgszBW/'
+           form.addEventListener('submit' , e => {
+             e.preventDefault()
+             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("Thanks for contacting us..! We Will Contact You Soon..."))
+              .catch(error =>console.error('Error!', error.message))
+           })
+          </script>
+             <script src="script.js"></script>
+             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+           
+

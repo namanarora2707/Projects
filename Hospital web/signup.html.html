@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>UNIVERSITY EDUCATIONAL WEBSITE</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <section class="sub-header">
+        <nav>
+            <a href="index.html"></a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html.html">ABOUT</a></li>
+                <li><a href="course.html.html">COURSE</a></li>
+                <li><a href="contact.html.html">CONTACT</a></li>
+                <li><a href="login.html.html">Login</a></li>
+            </ul>
+        </div>
+       </nav>
+        <h1>Login</h1>
+</section> 
+
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+              
+            
+ <form method="post" name="google-sheets" class="signup">
+   <div class="field">
+      <input type="email" placeholder="Email Address" name="email" required>
+   </div>
+   <div class="field">
+      <input type="text" placeholder="Password" name="password" required>
+   </div>
+   <div class="field">
+      <input type="text" placeholder="Confirm password" name="confirm_password" required>
+   </div>
+   <div class="field btn">
+      <div class="btn-layer"></div>
+      <input type="submit" name="submit" value="Signup">
+   </div>
+</form>
+</div>
+</div>
+</div>
+
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+  
+
+<script>
+      const scriptURL = 
+            'https://script.google.com/macros/s/AKfycbwABrewQgF26D9cckaPHOp9Nr3NY8Iny-d3ts9h296wzRi_94gMiJAV_aE2q5pIRCIh9w/exec'
+            const form = document.forms['google-sheets']
+           url:'https://api.apispreadsheets.com/data/MyiAdgDG7vdgszBW/'
+             form.addEventListener('submit' , e => {
+               e.preventDefault()
+               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for contacting us..! We Will Contact You Soon..."))
+                .catch(error =>console.error('Error!', error.message))
+             })
+            </script>
+               <script src="script.js"></script>
+               <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+               <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+             
+  <!-------Footer -------->
+
+<footer>
+<div class="footer-col">
+  <h3>Top Products</h3>
+  <li>Manage Reputation</li>
+  <li>Power Tools</li>
+  <li>Managed Website</li>
+</div>
+<div class="footer-col">
+  <h3>Quick Links</h3>
+  <li>Jobs</li>
+  <li>Brand Assests</li>
+  <li>Terms of Service</li>
+</div>
+<div class="footer-col">
+  <h3>Features</h3>
+  <li>Manage Reputation</li>
+  <li>Power Tools</li>
+  <li>Managed Website</li>
+</div>
+<div class="footer-col">
+  <h3>Resources</h3>
+  <li>Guide</li>
+  <li>Research</li>
+  <li>Experts</li>
+</div>
+
+<div class="footer-col">
+  <h3>Newletter</h3>
+  <p>You can trust us.We only send promo offers</p>
+</div>
+<div class="copyright">
+<p>copyright @2023 All rights reserved | Template made for Project</p>
+<div class="pro-links">
+  <i class="fa fa-facebook" aria-hidden="true"></i>
+  <i class="fa fa-instagram" aria-hidden="true"></i>
+  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</div>
+</div>
+</footer>
+</body>
+</html>

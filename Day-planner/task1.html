@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="task1.css">
+    <script defer src="task1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>Daily Plan</div>
+            <input type="date" id="styled-date">
+        </div>
+        <div class="planner">
+            <div class="time-slots">
+                <div class="slot">
+                    <span class="time-label">8:00 AM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">10:00 AM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">12:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">2:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">4:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">6:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">8:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+                <div class="slot">
+                    <span class="time-label">10:00 PM</span>
+                    <input type="text" class="task">
+                </div>
+            </div>
+            <div class="extras">
+                <div class="tasks-box">
+                    <h3>Tasks</h3>
+                    <textarea id="tasks"></textarea>
+                </div>
+                <div class="appointments-box">
+                    <h3>Appointments</h3>
+                    <textarea id="appointments"></textarea>
+                </div>
+                <div class="rating-box">
+                    <h3>Rate my day</h3>
+                    <div class="ratings">
+                        <span class="emoji" data-rate="1">😊</span>
+                        <span class="emoji" data-rate="2">😃</span>
+                        <span class="emoji" data-rate="3">😐</span>
+                        <span class="emoji" data-rate="4">😞</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button id="saveBtn">Save Plan</button>
+        <br>
+        <button id="clearBtn">Clear Plan</button>
+    </div>
+</body>
+</html>

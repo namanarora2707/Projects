@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <head>
+        <title>HOSPITAL WEBSITE</title>      
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpg"></a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html.html">ABOUT</a></li>
+                <li><a href="Facilities.html.html">FACILITIES</a></li>
+                <li><a href="contact.html.html">CONTACT</a></li>
+                <li><a href="login.html.html">LOGIN</a></li>
+            </ul>
+        </div>
+        <div class="text-box">
+          <h1>MEDIOXY MAPS</h1>
+          <p><br></p>
+          <a href="" class="hero-btn">Visit Us To Know More</a>
+        </div>
+        </nav>
+      </section>   
+              
+<footer>
+  <div class="footer-col">
+    <h3>Top Products</h3>
+    <li>Manage Reputation</li>
+    <li>Power Tools</li>
+    <li>Managed Website</li>
+  </div>
+  <div class="footer-col">
+    <h3>Quick Links</h3>
+    <li>Jobs</li>
+    <li>Brand Assests</li>
+    <li>Terms of Service</li>
+  </div>
+  <div class="footer-col">
+    <h3>Features</h3>
+    <li>Manage Reputation</li>
+    <li>Power Tools</li>
+    <li>Managed Website</li>
+  </div>
+  <div class="footer-col">
+    <h3>Resources</h3>
+    <li>Guide</li>
+    <li>Research</li>
+    <li>Experts</li>
+  </div>
+
+  <form method="post" name="messag-google-sheets">
+  <div class="footer-col">
+    <h3>Newletter</h3>
+    <p>You can trust us.We only send promo offers</p>
+    <div class="subscribe">
+      <input type="text" name="email" placeholder="Your Email Address">
+      <a href="#" class="yellow">SUBSCRIBE</a>
+    </div>
+  </div>
+</form>
+<script src=”https://code.jquery.com/jquery-3.4.1.js" integrity=”sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=” crossorigin=”anonymous”>
+</script>
+
+<script>
+  const scriptURL = 
+  'https://script.google.com/macros/s/AKfycbzTlS24nHTYJt_Oz00umbmU5mYWmFKl8sGlXtFGZQQy1CQDs3XVC2znSC-o4hS5-o1uJQ/exec'
+        const form = document.forms['messag-google-sheets']
+         url:'https://api.apispreadsheets.com/data/MyiAdgDG7vdgszBW/'
+         form.addEventListener('submit' , e => {
+           e.preventDefault()
+           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("You Have Been Subscribed..! Your Email has been saved!..."))
+            .catch(error =>console.error('Error!', error.message))
+         })
+        </script>
+           <script src="script.js"></script>
+           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+           <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<div class="copyright">
+  <p>copyright @2023 All rights reserved | Template made for Project</p>
+  <div class="pro-links">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+  </div>
+</div>
+</footer>
+</body>
+</html>    
